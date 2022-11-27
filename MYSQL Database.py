@@ -35,52 +35,52 @@ def updatebooks():
     option = int(input("\nWhich field you want to update?:"))
     if option == 1:
         pid = input("Enter Your ID:")
-        name = input("Enter Your Book Name:")
+        book_name = input("Enter Your Book Name:")
         cur = con.cursor()
         sql = "UPDATE data set book_name=%s where pid=%s"
         cur.execute(sql, (book_name, pid))
         con.commit()
-        select()
+        selectbooks()
         print("\n")
         print("Update Successfully")
     elif option == 2:
         pid = input("Enter Your ID:")
-        age = input("Enter Your Author Name:")
+        author_name = input("Enter Your Author Name:")
         cur = con.cursor()
         sql = "UPDATE data set author_name=%s where pid=%s"
         cur.execute(sql, (author_name, pid))
         con.commit()
-        select()
+        selectbooks()
         print("\n")
         print("Update Successfully")
     elif option == 3:
         pid = input("Enter Your ID:")
-        address = input("Enter Your Book Code:")
+        book_code = input("Enter Your Book Code:")
         cur = con.cursor()
         sql = "UPDATE data set book_code=%s where pid=%s"
         cur.execute(sql, (book_code, pid))
         con.commit()
-        select()
+        selectbooks()
         print("\n")
         print("Update Successfully")
     elif option == 4:
         pid = input("Enter Your ID:")
-        contact = input("Enter Total Books:")
+        total = input("Enter Total Books:")
         cur = con.cursor()
         sql = "UPDATE data total=%s where pid=%s"
         cur.execute(sql, (total, pid))
         con.commit()
-        select()
+        selectbooks()
         print("\n")
         print("Update Successfully")
     elif option == 5:
         pid = input("Enter Your ID:")
-        mail = input("Enter Your Subject:")
+        subject = input("Enter Your Subject:")
         cur = con.cursor()
         sql = "UPDATE data set subject=%s where pid=%s"
         cur.execute(sql, (subject, pid))
         con.commit()
-        select()
+        selectbooks()
         print("\n")
         print("Update Successfully")
     else:
