@@ -1,7 +1,7 @@
 import mysql.connector
 from tabulate import tabulate
 
-con = mysql.connector.connect(host="localhost", user="root", password="", database="library")
+con = mysql.connector.connect(host="localhost", user="root", password="root", database="library")
 
 def addbooks():
     book_name = input("Enter Book Name : ")
